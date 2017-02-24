@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#home').html('');
         $.ajax({
             type: "GET",
-            url: "profil.html",
+            url: "templates/profil.html",
             dataType: "html",
             success: function (data) {
                 $("#home").html(data);
@@ -24,7 +24,7 @@ $(document).ready(function() {
         $('#home').html('');
         $.ajax({
             type: "GET",
-            url: "accueil.html",
+            url: "templates/accueil.html",
             dataType: "html",
             success: function (data) {
                 $("#home").html(data + " " + sessionStorage.getItem('user'));
@@ -64,7 +64,7 @@ function redirectIfLoggedIn(){
             if (sessionStorage.getItem("user")) {
                 $.ajax({
                     type: "GET",
-                    url: "accueil.html",
+                    url: "templates/accueil.html",
                     dataType: "html",
                     success: function (data) {
                         $("#home").html(data + " " + sessionStorage.getItem('user'));
@@ -81,7 +81,7 @@ function redirectIfLoggedIn(){
     } else {
         $.ajax({
             type: "GET",
-            url: "login.html",
+            url: "templates/login.html",
             dataType: "html",
             success: function (data) {
                 $("#home").html(data);
